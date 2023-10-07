@@ -13,7 +13,7 @@ const Global = createGlobalStyle`
 	body {
     padding: 0;
     margin: 0;
-		height: 100%;
+    height: 100%;
     background-color: ${ props => props.theme.main };
     color: ${ props => props.theme.textColor };
 	}
