@@ -5,9 +5,9 @@ import themeReducer from './slices/theme'
 
 
 export const store = configureStore({
-	reducer: {
-		users: usersReducer,
-		posts: postsReducer,
-		theme: themeReducer
-	}
+  reducer: {
+    users: usersReducer,
+    posts: postsReducer,
+    theme: themeReducer
+  }
 })
