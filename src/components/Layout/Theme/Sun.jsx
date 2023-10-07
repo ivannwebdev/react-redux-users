@@ -3,8 +3,6 @@ import { styled } from 'styled-components'
 
 const Svg = styled.svg.attrs({
 	viewBox:'0 0 36 36',
-	xmlns:'http://www.w3.org/2000/svg',
-	xlink:'http://www.w3.org/1999/xlink',
 	role:'img',
 	preserveAspectRatio:'xMidYMid meet'
 })`

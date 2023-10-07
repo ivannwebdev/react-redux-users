@@ -40,12 +40,16 @@ function Pagination({ data, currentPage, pages, setCurrentPage }) {
 	return (
 		<Container>
 			<Layout>
-				{data?.map((post) => (
-					<div key={`${post.id}`}>
-						<h3>{post.title}</h3>
-						<p>{post.body}</p>
-					</div>
-				))}
+				{
+					data?.map(
+						post => (
+							<div key={`${post.id}`}>
+								<h3>{post.title}</h3>
+								<p>{post.body}</p>
+							</div>
+						)
+					)
+				}
 			</Layout>
 
 			<Pages>

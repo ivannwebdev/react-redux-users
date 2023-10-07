@@ -19,9 +19,7 @@ function BackLink() {
 	return (
 		<Container>
 			<Link style={{ textDecoration: 'none' }} to="/">
-
 				<BackArrow />
-
 			</Link>
 		</Container>
 	)

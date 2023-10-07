@@ -1,9 +1,12 @@
-const arrayFromNumber = (number) => {
-	const paramToNumber = Number(number)
+const arrayFromNumber = (num) => {
+	const paramToNumber = Number(num)
 
-	if (typeof paramToNumber !== 'number' || isNaN(number)) return
+	if (typeof paramToNumber !== 'number' || isNaN(num)) return
 
-	return [...Array(number).keys()].map(el => ++el)
+	return (
+		[...Array(num).keys()]
+			.map(el => ++el)
+	)
 }
 
 export { arrayFromNumber }

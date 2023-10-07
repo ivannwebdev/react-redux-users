@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Svg = styled.svg.attrs({
-	viewBox: '0 0 24 24',
-	xmlns: 'http://www.w3.org/2000/svg',
+	viewBox: '0 0 24 24'
 })`
   opacity: ${ props => props.theme.name === 'dark' ? 0 : 1 };
   position: absolute;
