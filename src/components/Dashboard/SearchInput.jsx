@@ -11,7 +11,7 @@ const Input = styled.input`
   color: ${ props => props.theme.textColor };
 
   &::placeholder {
-		color: ${ props => props.theme.name === 'dark' ? 'lightgrey' : 'grey' };
+	  color: ${ props => props.theme.name === 'dark' ? 'lightgrey' : 'grey' };
   }
 
   &:focus {

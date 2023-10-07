@@ -5,13 +5,13 @@ import styled from 'styled-components'
 const Container = styled.nav`
   display: flex;
   gap: 0.5rem;
-	align-items: center;
+  align-items: center;
   padding: 1rem;
 `
 const NavItem = styled.span`
   &:hover {
-	  color: #8c8989
-	}
+    color: #8c8989
+  }
 `
 function Navbar() {
   return (

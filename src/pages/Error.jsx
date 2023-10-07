@@ -28,7 +28,7 @@ function Error({ message }) {
     <Container>
       <Text>
         <h3>
-					ERROR
+          ERROR
         </h3>
         {message}
       </Text>
