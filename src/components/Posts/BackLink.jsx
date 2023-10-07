@@ -16,13 +16,13 @@ const BackArrow = styled.div`
 `
 
 function BackLink() {
-	return (
-		<Container>
-			<Link style={{ textDecoration: 'none' }} to="/">
-				<BackArrow />
-			</Link>
-		</Container>
-	)
+  return (
+    <Container>
+      <Link style={{ textDecoration: 'none' }} to="/">
+        <BackArrow />
+      </Link>
+    </Container>
+  )
 }
 
 export { BackLink }

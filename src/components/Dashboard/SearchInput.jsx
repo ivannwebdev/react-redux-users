@@ -21,14 +21,14 @@ const Input = styled.input`
 `
 
 function SearchInput({ value, onChange }) {
-	return (
-		<Input
-			placeholder="Enter username"
-			type="search"
-			value={value}
-			onChange={onChange}
-		/>
-	)
+  return (
+    <Input
+      placeholder="Enter username"
+      type="search"
+      value={value}
+      onChange={onChange}
+    />
+  )
 }
 
 export { SearchInput }

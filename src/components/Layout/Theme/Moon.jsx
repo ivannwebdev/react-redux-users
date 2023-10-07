@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Svg = styled.svg.attrs({
-	viewBox: '0 0 24 24'
+  viewBox: '0 0 24 24'
 })`
   opacity: ${ props => props.theme.name === 'dark' ? 0 : 1 };
   position: absolute;
@@ -14,10 +14,10 @@ const Svg = styled.svg.attrs({
   transition: 0.3s;
 `
 function Moon() {
-	return (
-		<Svg>
-			<path
-				d="M3.32031
+  return (
+    <Svg>
+      <path
+        d="M3.32031
         11.6835C3.32031
         16.6541 7.34975
         20.6835 12.3203
@@ -37,13 +37,13 @@ function Moon() {
         4.66028 3.32031
         7.89912 3.32031
         11.6835Z"
-				stroke="#000000"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		</Svg>
-	)
+        stroke="#000000"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </Svg>
+  )
 }
 
 export { Moon }

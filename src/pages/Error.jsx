@@ -26,16 +26,16 @@ const Text = styled.div`
 `
 
 function Error({ message }) {
-	return (
-		<Container>
-			<Text>
-				<Title>
+  return (
+    <Container>
+      <Text>
+        <Title>
 					ERROR
-				</Title>
-				{message}
-			</Text>
-		</Container>
-	)
+        </Title>
+        {message}
+      </Text>
+    </Container>
+  )
 }
 
 export { Error }

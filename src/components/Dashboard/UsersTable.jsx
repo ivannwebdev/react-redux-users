@@ -27,36 +27,36 @@ const UserNotFound = styled.h3`
 `
 
 function UsersTable({ users }) {
-	const userNotFound = !users.length
+  const userNotFound = !users.length
 
-	if (userNotFound) return <UserNotFound>No such user</UserNotFound>
+  if (userNotFound) return <UserNotFound>No such user</UserNotFound>
 
-	return (
-		<Table>
-			<Caption>Users and their posts</Caption>
-			<thead>
-				<tr>
-					<Th>Id</Th>
-					<Th>Name</Th>
-					<Th>Email</Th>
-					<Th/>
-				</tr>
-			</thead>
+  return (
+    <Table>
+      <Caption>Users and their posts</Caption>
+      <thead>
+        <tr>
+          <Th>Id</Th>
+          <Th>Name</Th>
+          <Th>Email</Th>
+          <Th/>
+        </tr>
+      </thead>
 
-			<tbody>
-				{
-					users.map(({ id, name, email }) =>
-						<UserRow
-							id={id}
-							name={name}
-							email={email}
-							key={`${id}`}
-						/>
-					)
-				}
-			</tbody>
-		</Table>
-	)
+      <tbody>
+        {
+          users.map(({ id, name, email }) =>
+            <UserRow
+              id={id}
+              name={name}
+              email={email}
+              key={`${id}`}
+            />
+          )
+        }
+      </tbody>
+    </Table>
+  )
 }
 
 export { UsersTable }

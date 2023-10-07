@@ -1,49 +1,49 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 export const getPosts = createAsyncThunk(
-	'posts/getPosts',
-	async(id) => {
-		const response = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
-		const posts = await response.json()
+  'posts/getPosts',
+  async(id) => {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
+    const posts = await response.json()
 
-		return posts
-	}
+    return posts
+  }
 )
 
 const initialState = {}
 
 const postsSlice = createSlice({
-	name: 'posts',
-	initialState,
-	extraReducers: {
-		[getPosts.pending]: (state, action) => {
-			const id = action.meta.arg
+  name: 'posts',
+  initialState,
+  extraReducers: {
+    [getPosts.pending]: (state, action) => {
+      const id = action.meta.arg
 
-			state[id] = {
-				userPosts: [],
-				isLoading: true,
-				error: null
-			}
-		},
-		[getPosts.fulfilled]: (state, action) => {
-			const id = action.meta.arg
-			const posts = action.payload
+      state[id] = {
+        userPosts: [],
+        isLoading: true,
+        error: null
+      }
+    },
+    [getPosts.fulfilled]: (state, action) => {
+      const id = action.meta.arg
+      const posts = action.payload
 
-			state[id].isLoading = false
-			state[id].userPosts = posts
-		},
-		[getPosts.rejected]: (state, action) => {
-			const id = action.meta.arg
-			const error = action.error.message
+      state[id].isLoading = false
+      state[id].userPosts = posts
+    },
+    [getPosts.rejected]: (state, action) => {
+      const id = action.meta.arg
+      const error = action.error.message
 
-			state[id].isLoading = false
-			state[id].error = error
-		}
-	}
+      state[id].isLoading = false
+      state[id].error = error
+    }
+  }
 })
 
 export const postsActions = {
-	...postsSlice.actions,
-	getPosts
+  ...postsSlice.actions,
+  getPosts
 }
 export default postsSlice.reducer

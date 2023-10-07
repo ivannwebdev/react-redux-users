@@ -24,18 +24,18 @@ const Button = styled.button`
 `
 
 function UserRow({ id, name, email }) {
-	return (
-		<Tr key={`${id}`}>
-			<Td>{id}</Td>
-			<Td>{name}</Td>
-			<Td>{email}</Td>
-			<Td>
-				<Link to={`${id}`}>
-					<Button>Posts</Button>
-				</Link>
-			</Td>
-		</Tr>
-	)
+  return (
+    <Tr key={`${id}`}>
+      <Td>{id}</Td>
+      <Td>{name}</Td>
+      <Td>{email}</Td>
+      <Td>
+        <Link to={`${id}`}>
+          <Button>Posts</Button>
+        </Link>
+      </Td>
+    </Tr>
+  )
 }
 
 export { UserRow }

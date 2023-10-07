@@ -4,8 +4,8 @@ const isLoading = state => state.users.isLoading
 const error = state => state.users.error
 
 export const usersSelectors = {
-	users,
-	isLoading,
-	error,
-	username
+  users,
+  isLoading,
+  error,
+  username
 }

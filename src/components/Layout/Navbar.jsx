@@ -14,18 +14,18 @@ const NavItem = styled.span`
 	}
 `
 function Navbar() {
-	return (
-		<Container>
-			<NavLink
-				to='/'
-				style={{ textDecoration: 'none', color: 'white' }}
-			>
-				<NavItem>
+  return (
+    <Container>
+      <NavLink
+        to='/'
+        style={{ textDecoration: 'none', color: 'white' }}
+      >
+        <NavItem>
 					Home
-				</NavItem>
-			</NavLink>
-		</Container>
-	)
+        </NavItem>
+      </NavLink>
+    </Container>
+  )
 }
 
 export { Navbar }

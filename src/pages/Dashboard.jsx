@@ -17,30 +17,30 @@ const Container = styled.div`
 `
 
 function Dashboard() {
-	const isLoading = useSelector(usersSelectors.isLoading)
-	const users = useSelector(usersSelectors.users)
-	const error = useSelector(usersSelectors.error)
-	const { getUsers } = useActions()
-	const { searchedItems, value, onChange } = useSearchInput(users)
+  const isLoading = useSelector(usersSelectors.isLoading)
+  const users = useSelector(usersSelectors.users)
+  const error = useSelector(usersSelectors.error)
+  const { getUsers } = useActions()
+  const { searchedItems, value, onChange } = useSearchInput(users)
 
-	useEffect(() => {
-		getUsers()
-	}, [])
+  useEffect(() => {
+    getUsers()
+  }, [])
 
-	if (isLoading) return <Loader />
+  if (isLoading) return <Loader />
 
-	if (error) return <Error message={error} />
+  if (error) return <Error message={error} />
 
-	return (
-		<Container>
-			<SearchInput
-				users={searchedItems}
-				value={value}
-				onChange={onChange}
-			/>
-			<UsersTable users={searchedItems} />
-		</Container>
-	)
+  return (
+    <Container>
+      <SearchInput
+        users={searchedItems}
+        value={value}
+        onChange={onChange}
+      />
+      <UsersTable users={searchedItems} />
+    </Container>
+  )
 }
 
 export { Dashboard }

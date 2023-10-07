@@ -12,12 +12,12 @@ const Container = styled.header`
 `
 
 function Header() {
-	return (
-		<Container>
-			<Navbar />
-			<Theme />
-		</Container>
-	)
+  return (
+    <Container>
+      <Navbar />
+      <Theme />
+    </Container>
+  )
 }
 
 export { Header }

@@ -27,46 +27,46 @@ const Title = styled.div`
 `
 
 function Posts() {
-	const { id } = useParams()
-	const numId = Number(id)
-	const { getPosts } = useActions()
-	const isLoading = useSelector(postsSelectors.isLoading(numId))
-	const error = useSelector(postsSelectors.error(numId))
-	const posts = useSelector(postsSelectors.posts(numId))
-	const username = useSelector(usersSelectors.username(numId))
-	const users = useSelector(usersSelectors.users)
-	const { paginatedData, currentPage, pages, setCurrentPage } = usePagination({
-		data: posts,
-		limit: 4
-	})
-	const pageNotFound = !Number.isInteger(numId) || numId < 1 || numId > users?.length
+  const { id } = useParams()
+  const numId = Number(id)
+  const { getPosts } = useActions()
+  const isLoading = useSelector(postsSelectors.isLoading(numId))
+  const error = useSelector(postsSelectors.error(numId))
+  const posts = useSelector(postsSelectors.posts(numId))
+  const username = useSelector(usersSelectors.username(numId))
+  const users = useSelector(usersSelectors.users)
+  const { paginatedData, currentPage, pages, setCurrentPage } = usePagination({
+    data: posts,
+    limit: 4
+  })
+  const pageNotFound = !Number.isInteger(numId) || numId < 1 || numId > users?.length
 
-	useEffect(() => {
-		getPosts(numId)
-	}, [id])
+  useEffect(() => {
+    getPosts(numId)
+  }, [id])
 
-	if (isLoading) return <Loader $small />
+  if (isLoading) return <Loader $small />
 
-	if (error) return <Error message={error.message} />
+  if (error) return <Error message={error.message} />
 
-	if (pageNotFound) return <PageNotFound />
+  if (pageNotFound) return <PageNotFound />
 
-	return (
-		<Container>
-			<Title>{username}</Title>
+  return (
+    <Container>
+      <Title>{username}</Title>
 
-			<BackLink />
+      <BackLink />
 
-			<Pagination
-				username={username}
-				data={paginatedData}
-				currentPage={currentPage}
-				pages={pages}
-				setCurrentPage={setCurrentPage}
-			/>
+      <Pagination
+        username={username}
+        data={paginatedData}
+        currentPage={currentPage}
+        pages={pages}
+        setCurrentPage={setCurrentPage}
+      />
 
-		</Container>
-	)
+    </Container>
+  )
 }
 
 export { Posts }

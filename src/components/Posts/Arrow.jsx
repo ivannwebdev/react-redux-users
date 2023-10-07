@@ -20,11 +20,11 @@ const ArrowIcon = styled.div`
 `
 
 function Arrow({ $right, onClick }) {
-	return (
-		<Container onClick={onClick}>
-			<ArrowIcon $right={$right} />
-		</Container>
-	)
+  return (
+    <Container onClick={onClick}>
+      <ArrowIcon $right={$right} />
+    </Container>
+  )
 }
 
 export { Arrow }

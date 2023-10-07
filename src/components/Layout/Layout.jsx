@@ -8,12 +8,12 @@ const Container = styled.div`
 `
 
 function Layout() {
-	return (
-		<Container>
-			<Header />
-			<Outlet />
-		</Container>
-	)
+  return (
+    <Container>
+      <Header />
+      <Outlet />
+    </Container>
+  )
 }
 
 export { Layout }

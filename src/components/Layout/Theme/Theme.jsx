@@ -8,8 +8,8 @@ const Container = styled.div`
   padding: 1rem;
 `
 const Input = styled.input.attrs({
-	type: 'checkbox',
-	id: 'theme-toggle',
+  type: 'checkbox',
+  id: 'theme-toggle',
 })`
   width: 0;
   height: 0;
@@ -30,7 +30,7 @@ const Input = styled.input.attrs({
   }
 `
 const Label = styled.label.attrs({
-	htmlFor: 'theme-toggle',
+  htmlFor: 'theme-toggle',
 })`
   width: 125px;
   height: 50px;
@@ -59,26 +59,26 @@ const Label = styled.label.attrs({
 `
 
 function Theme() {
-	const theme = useTheme()
-	const { setTheme } = useActions()
-	const isDark = theme.name === 'dark'
+  const theme = useTheme()
+  const { setTheme } = useActions()
+  const isDark = theme.name === 'dark'
 
-	function toggleTheme() {
-		setTheme(isDark ? 'light' : 'dark')
-	}
+  function toggleTheme() {
+    setTheme(isDark ? 'light' : 'dark')
+  }
 
-	return (
-		<Container>
-			<Input
-				onChange={toggleTheme}
-				checked={isDark}
-			/>
-			<Label>
-				<Sun/>
-				<Moon/>
-			</Label>
-		</Container>
-	)
+  return (
+    <Container>
+      <Input
+        onChange={toggleTheme}
+        checked={isDark}
+      />
+      <Label>
+        <Sun/>
+        <Moon/>
+      </Label>
+    </Container>
+  )
 }
 
 export { Theme }

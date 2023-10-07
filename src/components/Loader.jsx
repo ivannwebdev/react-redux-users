@@ -30,11 +30,11 @@ const Preloader = styled.div`
 `
 
 function Loader({ $small }) {
-	return (
-		<Container>
-			<Preloader $small={$small} />
-		</Container>
-	)
+  return (
+    <Container>
+      <Preloader $small={$small} />
+    </Container>
+  )
 }
 
 export { Loader }

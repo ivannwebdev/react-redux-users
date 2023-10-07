@@ -6,22 +6,22 @@ import { useEffect } from 'react'
 import { useActions } from './hooks/useActions'
 
 function App() {
-	const { getUsers } = useActions()
+  const { getUsers } = useActions()
 
-	useEffect(
-		() => {
-			getUsers()
-		}
-		, [])
+  useEffect(
+    () => {
+      getUsers()
+    }
+    , [])
 
-	return (
-		<Routes>
-			<Route path='/' element={<Layout />}>
-				<Route path='/' element={<Dashboard />} />
-				<Route path=':id' element={<Posts />} />
-			</Route>
-		</Routes>
-	)
+  return (
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route path='/' element={<Dashboard />} />
+        <Route path=':id' element={<Posts />} />
+      </Route>
+    </Routes>
+  )
 }
 
 export  { App }

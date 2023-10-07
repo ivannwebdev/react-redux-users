@@ -21,10 +21,10 @@ const Page = styled.div`
   border: 1px solid darkgray;
   cursor: pointer;
 	background-color: ${ props => {
-		if (props.theme.name === 'dark') return props.$highlighted ? 'grey' : 'none'
+    if (props.theme.name === 'dark') return props.$highlighted ? 'grey' : 'none'
 
-		return props.$highlighted ? 'lightgrey' : 'none'
-	}
+    return props.$highlighted ? 'lightgrey' : 'none'
+  }
 };
 
 	&:hover {
@@ -33,44 +33,44 @@ const Page = styled.div`
 `
 
 function Pagination({ data, currentPage, pages, setCurrentPage }) {
-	const setPage = (page) => {
-		return () => setCurrentPage(page)
-	}
+  const setPage = (page) => {
+    return () => setCurrentPage(page)
+  }
 
-	return (
-		<Container>
-			<Layout>
-				{
-					data?.map(
-						post => (
-							<div key={`${post.id}`}>
-								<h3>{post.title}</h3>
-								<p>{post.body}</p>
-							</div>
-						)
-					)
-				}
-			</Layout>
+  return (
+    <Container>
+      <Layout>
+        {
+          data?.map(
+            post => (
+              <div key={`${post.id}`}>
+                <h3>{post.title}</h3>
+                <p>{post.body}</p>
+              </div>
+            )
+          )
+        }
+      </Layout>
 
-			<Pages>
-				<Arrow onClick={setPage(currentPage - 1)} />
+      <Pages>
+        <Arrow onClick={setPage(currentPage - 1)} />
 
-				{
-					pages?.map((page) => (
-						<Page
-							onClick={setPage(page)}
-							$highlighted={page === currentPage}
-							key={`${page}`}
-						>
-							{page}
-						</Page>
-					))
-				}
+        {
+          pages?.map((page) => (
+            <Page
+              onClick={setPage(page)}
+              $highlighted={page === currentPage}
+              key={`${page}`}
+            >
+              {page}
+            </Page>
+          ))
+        }
 
-				<Arrow onClick={setPage(currentPage + 1)} $right />
-			</Pages>
-		</Container>
-	)
+        <Arrow onClick={setPage(currentPage + 1)} $right />
+      </Pages>
+    </Container>
+  )
 }
 
 export { Pagination }

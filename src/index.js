@@ -20,12 +20,12 @@ const Global = createGlobalStyle`
 `
 
 root.render(
-	<HashRouter>
-		<Provider store={store}>
-			<ThemeProvider>
-				<Global />
-				<App />
-			</ThemeProvider>
-		</Provider>
-	</HashRouter>
+  <HashRouter>
+    <Provider store={store}>
+      <ThemeProvider>
+        <Global />
+        <App />
+      </ThemeProvider>
+    </Provider>
+  </HashRouter>
 )

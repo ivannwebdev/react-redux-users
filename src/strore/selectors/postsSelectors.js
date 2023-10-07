@@ -3,7 +3,7 @@ const isLoading = id => state => state.posts[id]?.isLoading
 const error = id => state => state.posts[id]?.error
 
 export const postsSelectors = {
-	posts,
-	isLoading,
-	error
+  posts,
+  isLoading,
+  error
 }
