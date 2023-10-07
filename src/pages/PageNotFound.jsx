@@ -5,11 +5,11 @@ const Img = styled.img.attrs({
   src: 'https://www.fiatprofessional.com/content/dam/moc/common/404-error/mobile/mobile_404.png',
   alt: ''
 })`
-	height: 100%;
+  height: 100%;
 `
 const Container = styled.div`
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 `
 
 function PageNotFound() {

@@ -9,7 +9,7 @@ import { ThemeProvider } from './components/Layout/Theme/ThemeProvider'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-const Global = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
@@ -23,7 +23,7 @@ root.render(
   <HashRouter>
     <Provider store={store}>
       <ThemeProvider>
-        <Global />
+        <GlobalStyles />
         <App />
       </ThemeProvider>
     </Provider>

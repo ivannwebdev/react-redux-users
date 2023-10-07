@@ -7,12 +7,12 @@ const Input = styled.input`
   font-size: 1rem;
   margin-top: 0.5rem;
   border: 1px solid ${ props => props.theme.name === 'dark' ? 'white' : 'grey' };
-	background-color: ${ props => props.theme.name === 'dark' ? 'grey' : 'white' };
-	color: ${ props => props.theme.textColor };
+  background-color: ${ props => props.theme.name === 'dark' ? 'grey' : 'white' };
+  color: ${ props => props.theme.textColor };
 
-	&::placeholder {
+  &::placeholder {
 		color: ${ props => props.theme.name === 'dark' ? 'lightgrey' : 'grey' };
-	}
+  }
 
   &:focus {
     outline: none;

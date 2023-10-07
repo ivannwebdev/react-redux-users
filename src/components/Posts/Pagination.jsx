@@ -12,23 +12,23 @@ const Layout = styled.div`
   font-size: 1.075em;
 `
 const Pages = styled.div`
-	display: flex;
+  display: flex;
   justify-content: center;
   margin-top: 1rem;
 `
 const Page = styled.div`
-	padding: 1rem;
+  padding: 1rem;
   border: 1px solid darkgray;
   cursor: pointer;
-	background-color: ${ props => {
+  background-color: ${ props => {
     if (props.theme.name === 'dark') return props.$highlighted ? 'grey' : 'none'
 
     return props.$highlighted ? 'lightgrey' : 'none'
   }
 };
 
-	&:hover {
-		border-color: ${ props => props.theme.name === 'dark' ? 'white' : 'blue' };
+  &:hover {
+    border-color: ${ props => props.theme.name === 'dark' ? 'white' : 'blue' };
 	}
 `
 

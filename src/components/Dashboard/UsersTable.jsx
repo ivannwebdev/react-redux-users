@@ -6,7 +6,7 @@ const Table = styled.table`
   min-width: 60vw;
   border-collapse: collapse;
   border: 1px solid ${ props => props.theme.textColor };
-	color: ${props => props.theme.textColor};
+  color: ${props => props.theme.textColor};
   border-radius: 1rem;
   background-color: white;
 `
@@ -15,15 +15,15 @@ const Caption = styled.caption`
   text-transform: uppercase;
   text-align: center;
   padding: 1rem;
-	color: ${ props => props.theme.textColor };
+  color: ${ props => props.theme.textColor };
 `
 const Th = styled.th`
-	background-color: ${ props => props.theme.name === 'dark' ? 'rgb(66, 66, 66)' : 'darkgray' };
-	text-align: center;
-	padding: 0.8rem;
+  background-color: ${ props => props.theme.name === 'dark' ? 'rgb(66, 66, 66)' : 'darkgray' };
+  text-align: center;
+  padding: 0.8rem;
 `
 const UserNotFound = styled.h3`
-	padding: 1rem;
+  padding: 1rem;
 `
 
 function UsersTable({ users }) {

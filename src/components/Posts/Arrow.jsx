@@ -8,7 +8,7 @@ const Container = styled.div`
 
   &:hover {
     border-bottom: 2px solid darkgray;
- }
+  }
 `
 const ArrowIcon = styled.div`
   margin-top: 15px;

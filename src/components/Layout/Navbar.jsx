@@ -3,14 +3,14 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Container = styled.nav`
-	display: flex;
-	gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 	align-items: center;
-	padding: 1rem;
+  padding: 1rem;
 `
 const NavItem = styled.span`
-	&:hover {
-		color: #8c8989
+  &:hover {
+	  color: #8c8989
 	}
 `
 function Navbar() {

@@ -13,16 +13,16 @@ import { useActions } from '../hooks/useActions'
 import { BackLink } from '../components/Posts/BackLink'
 
 const Container = styled.div`
-	display: grid;
-	grid-template-columns: 300px 1fr;
-	row-gap: 2rem;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  row-gap: 2rem;
 `
 const Title = styled.div`
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: center;
-	padding-top: 1.5rem;
-	font-size: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 `
 
