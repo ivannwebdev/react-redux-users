@@ -16,7 +16,7 @@ const Global = createGlobalStyle`
     height: 100%;
     background-color: ${ props => props.theme.main };
     color: ${ props => props.theme.textColor };
-	}
+  }
 `
 
 root.render(
