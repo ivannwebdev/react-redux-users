@@ -21,7 +21,7 @@ function Navbar() {
         style={{ textDecoration: 'none', color: 'white' }}
       >
         <NavItem>
-					Home
+          Home
         </NavItem>
       </NavLink>
     </Container>
