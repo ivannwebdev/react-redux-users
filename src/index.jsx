@@ -10,7 +10,7 @@ import { ThemeProvider } from './components/Layout/Theme/ThemeProvider'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 const Global = createGlobalStyle`
-	body {
+  body {
     padding: 0;
     margin: 0;
     height: 100%;
