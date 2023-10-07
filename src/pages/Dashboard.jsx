@@ -38,6 +38,7 @@ function Dashboard() {
         value={value}
         onChange={onChange}
       />
+
       <UsersTable users={searchedItems} />
     </Container>
   )

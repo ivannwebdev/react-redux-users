@@ -24,8 +24,11 @@ root.render(
   <HashRouter>
     <Provider store={store}>
       <ThemeProvider>
+
         <GlobalStyles />
+
         <App />
+
       </ThemeProvider>
     </Provider>
   </HashRouter>
