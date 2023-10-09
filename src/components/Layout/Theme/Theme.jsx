@@ -11,8 +11,6 @@ const Input = styled.input.attrs({
   type: 'checkbox',
   id: 'theme-toggle',
 })`
-  width: 0;
-  height: 0;
   display: none;
 
   & + label {
@@ -23,14 +21,16 @@ const Input = styled.input.attrs({
     background: rgb(74, 74, 74);
 
     &::after {
-      left: 120px;
+      content: '';
+      left: 125px;
+      top: 3px;
       transform: translateX(-50px);
       background: linear-gradient(180deg, #777, #3a3a3a);
     }
   }
 `
 const Label = styled.label.attrs({
-  htmlFor: 'theme-toggle',
+  for: 'theme-toggle',
 })`
   width: 125px;
   height: 50px;
@@ -42,15 +42,14 @@ const Label = styled.label.attrs({
     inset 0 5px 15px rgba(0, 0, 0, 0.4),
     inset 0 -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  transition: 0.3s;
 
   &::after {
     content: '';
     width: 45px;
     height: 45px;
     position: absolute;
-    top: 3;
-    left: 10;
+    top: 3px;
+    left: 5px;
     background: linear-gradient(180deg, #ffcc89, #d8860b);
     border-radius: 100%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);

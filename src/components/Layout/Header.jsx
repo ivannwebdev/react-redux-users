@@ -5,6 +5,7 @@ import { Theme } from './Theme/Theme'
 
 const Container = styled.header`
   position: sticky;
+  top: 0;
   background-color: rgb(10, 82, 198);
   display: flex;
   justify-content: space-between;

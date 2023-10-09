@@ -14,9 +14,24 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
     height: 100%;
+    transition: background-color .3s ease;
 
-    background-color: ${ props => props.theme.main };
-    color: ${ props => props.theme.textColor };
+    background-color: ${(props) => props.theme.main};
+    color: ${(props) => props.theme.textColor};
+
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: lightgrey;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(73, 97, 232);
+      border-radius: 20px;
+      border: 3px solid lightgrey;
+    }
   }
 `
 
