@@ -1,6 +1,6 @@
 {
   "homepage": "http://ivannwebdev.github.io/react-redux-users",
-  "name": "test",
+  "name": "react-redux-users",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
