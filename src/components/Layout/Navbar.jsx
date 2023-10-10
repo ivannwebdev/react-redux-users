@@ -2,11 +2,14 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-const Container = styled.nav`
+const Container = styled.div`
   display: flex;
-  gap: 0.5rem;
   align-items: center;
   padding: 1rem;
+`
+const Navigation = styled.nav`
+  display: flex;
+  gap: 1rem;
 `
 const NavItem = styled.span`
   &:hover {
@@ -14,16 +17,30 @@ const NavItem = styled.span`
   }
 `
 function Navbar() {
+  const navItems = [
+    { name: 'Home', link: '/' }
+  ]
+
   return (
     <Container>
-      <NavLink
-        to='/'
-        style={{ textDecoration: 'none', color: 'white' }}
-      >
-        <NavItem>
-          Home
-        </NavItem>
-      </NavLink>
+
+      <Navigation>
+        {
+          navItems
+            .map(
+              item => (
+                <NavLink
+                  to={item.link}
+                  style={{ textDecoration: 'none', color: 'white' }}
+                  key={`${item.name}`}
+                >
+                  <NavItem> {item.name} </NavItem>
+                </NavLink>
+              )
+            )
+        }
+      </Navigation>
+
     </Container>
   )
 }
