@@ -36,7 +36,7 @@ const Label = styled.label.attrs({
   height: 50px;
   position: relative;
   display: block;
-  top: -7;
+  bottom: 5px;
   border-radius: 50px;
   box-shadow:
     inset 0 5px 15px rgba(0, 0, 0, 0.4),
