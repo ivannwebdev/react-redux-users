@@ -1,10 +1,10 @@
-const arrayFromNumber = (num) => {
-  const paramToNumber = Number(num)
+const arrayFromNumber = (p) => {
+  const paramToNumber = Number(p)
 
-  if (typeof paramToNumber !== 'number' || isNaN(num)) return
+  if (isNaN(paramToNumber)) return
 
   return (
-    [...Array(num).keys()]
+    [...Array(paramToNumber).keys()]
       .map(el => ++el)
   )
 }
