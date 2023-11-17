@@ -15,8 +15,8 @@ const initialState = {}
 const postsSlice = createSlice({
   name: 'posts',
   initialState,
-  extraReducers: {
-    [getPosts.pending]: (state, action) => {
+  extraReducers: (builder) => {
+    builder.addCase(getPosts.pending, (state, action) => {
       const id = action.meta.arg
 
       state[id] = {
@@ -24,21 +24,23 @@ const postsSlice = createSlice({
         isLoading: true,
         error: null
       }
-    },
-    [getPosts.fulfilled]: (state, action) => {
+    })
+
+    builder.addCase(getPosts.fulfilled, (state, action) => {
       const id = action.meta.arg
       const posts = action.payload
 
       state[id].isLoading = false
       state[id].userPosts = posts
-    },
-    [getPosts.rejected]: (state, action) => {
+    })
+
+    builder.addCase(getPosts.rejected, (state, action) => {
       const id = action.meta.arg
       const error = action.error.message
 
       state[id].isLoading = false
       state[id].error = error
-    }
+    })
   }
 })
 

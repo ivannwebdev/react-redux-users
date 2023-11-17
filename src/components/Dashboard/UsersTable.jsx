@@ -22,15 +22,8 @@ const Th = styled.th`
   text-align: center;
   padding: 0.8rem;
 `
-const UserNotFound = styled.h3`
-  padding: 1rem;
-`
 
 function UsersTable({ users }) {
-  const userNotFound = !users.length
-
-  if (userNotFound) return <UserNotFound>No such user</UserNotFound>
-
   return (
     <Table>
       <Caption>Users and their posts</Caption>

@@ -38,9 +38,9 @@ function Moon() {
         7.89912 3.32031
         11.6835Z"
         stroke="#000000"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </Svg>
   )

@@ -15,6 +15,9 @@ const Container = styled.div`
   align-items: center;
   min-height: 100%;
 `
+const UserNotFound = styled.h3`
+  padding: 1rem;
+`
 
 function Dashboard() {
   const isLoading = useSelector(usersSelectors.isLoading)
@@ -39,7 +42,13 @@ function Dashboard() {
         onChange={onChange}
       />
 
-      <UsersTable users={searchedItems} />
+      {
+        searchedItems.length
+          ?
+          <UsersTable users={searchedItems} />
+          :
+          <UserNotFound>No such user</UserNotFound>
+      }
     </Container>
   )
 }

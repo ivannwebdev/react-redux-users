@@ -41,7 +41,6 @@ root.render(
       <ThemeProvider>
 
         <GlobalStyles />
-
         <App />
 
       </ThemeProvider>

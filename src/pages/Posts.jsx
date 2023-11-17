@@ -29,12 +29,12 @@ const Title = styled.div`
 function Posts() {
   const { id } = useParams()
   const numId = Number(id)
-  const { getPosts } = useActions()
   const isLoading = useSelector(postsSelectors.isLoading(numId))
   const error = useSelector(postsSelectors.error(numId))
   const posts = useSelector(postsSelectors.posts(numId))
   const username = useSelector(usersSelectors.username(numId))
   const users = useSelector(usersSelectors.users)
+  const { getPosts } = useActions()
   const { paginatedData, currentPage, pages, setCurrentPage } = usePagination({
     data: posts,
     limit: 4
@@ -64,7 +64,6 @@ function Posts() {
         pages={pages}
         setCurrentPage={setCurrentPage}
       />
-
     </Container>
   )
 }

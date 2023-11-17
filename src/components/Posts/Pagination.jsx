@@ -42,12 +42,11 @@ function Pagination({ data, currentPage, pages, setCurrentPage }) {
       <Layout>
         {
           data?.map(
-            post => (
+            post =>
               <div key={`${post.id}`}>
                 <h3>{post.title}</h3>
                 <p>{post.body}</p>
               </div>
-            )
           )
         }
       </Layout>
@@ -56,15 +55,16 @@ function Pagination({ data, currentPage, pages, setCurrentPage }) {
         <Arrow onClick={setPage(currentPage - 1)} />
 
         {
-          pages?.map((page) => (
-            <Page
-              onClick={setPage(page)}
-              $highlighted={page === currentPage}
-              key={`${page}`}
-            >
-              {page}
-            </Page>
-          ))
+          pages?.map(
+            page =>
+              <Page
+                onClick={setPage(page)}
+                $highlighted={page === currentPage}
+                key={`${page}`}
+              >
+                {page}
+              </Page>
+          )
         }
 
         <Arrow onClick={setPage(currentPage + 1)} $right />

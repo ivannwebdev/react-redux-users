@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Tr = styled.tr`
@@ -13,6 +13,9 @@ const Td = styled.td`
   text-align: center;
   padding: 0.8rem;
 `
+const Link = styled.div`
+
+`
 const Button = styled.button`
   padding: 0.7rem;
   border: none;
@@ -25,15 +28,15 @@ const Button = styled.button`
 `
 
 function UserRow({ id, name, email }) {
+  const navigate = useNavigate()
+
   return (
     <Tr key={`${id}`}>
       <Td>{id}</Td>
       <Td>{name}</Td>
       <Td>{email}</Td>
       <Td>
-        <Link to={`${id}`}>
-          <Button>Posts</Button>
-        </Link>
+        <Button onClick={() => navigate(`${id}`)}>Posts</Button>
       </Td>
     </Tr>
   )

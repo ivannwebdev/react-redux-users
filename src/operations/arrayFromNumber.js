@@ -1,4 +1,4 @@
-const arrayFromNumber = (p) => {
+function arrayFromNumber(p) {
   const paramToNumber = Number(p)
 
   if (isNaN(paramToNumber)) return

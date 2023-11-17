@@ -30,7 +30,7 @@ const Input = styled.input.attrs({
   }
 `
 const Label = styled.label.attrs({
-  for: 'theme-toggle',
+  htmlFor: 'theme-toggle',
 })`
   width: 125px;
   height: 50px;
