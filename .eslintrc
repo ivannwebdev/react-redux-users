@@ -3,7 +3,9 @@
     "react-app",
     "react-app/jest"
   ],
-  "plugins": ["react-hooks"],
+  "plugins": [
+    "react-hooks"
+  ],
   "rules": {
     "react-hooks/exhaustive-deps": 0,
     "indent": [
@@ -13,6 +15,10 @@
     "linebreak-style": [
       "error",
       "windows"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
     ],
     "quotes": [
       "error",
