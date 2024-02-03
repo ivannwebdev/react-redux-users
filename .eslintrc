@@ -32,6 +32,10 @@
       "error",
       "always"
     ],
-    "newline-before-return": "error"
+    "newline-before-return": "error",
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ]
   }
 }

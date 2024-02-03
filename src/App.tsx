@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Router } from './components/Router/Router.tsx'
 import { ThemeProvider } from './components/Layout/Theme/ThemeProvider.tsx'
 import { Provider } from 'react-redux'
@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
-function App() {
+const App: FC = () => {
   return (
     <Provider store={store}>
       <HashRouter>
